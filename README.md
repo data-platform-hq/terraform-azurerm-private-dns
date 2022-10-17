@@ -1,5 +1,5 @@
 # Azure Private DNS Terraform module
-Terraform module for creation Azure <>
+Terraform module for creation Azure Private DNS
 
 ## Usage
 
