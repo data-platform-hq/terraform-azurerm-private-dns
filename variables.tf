@@ -3,21 +3,6 @@ variable "create_private_zone" {
   description = "Condition for Private DNS Zone creation"
 }
 
-variable "project" {
-  type        = string
-  description = "Project name"
-}
-
-variable "env" {
-  type        = string
-  description = "Environment name"
-}
-
-variable "location" {
-  type        = string
-  description = "Azure location"
-}
-
 variable "resource_group" {
   type        = string
   description = "Azure location"
