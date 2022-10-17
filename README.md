@@ -44,11 +44,11 @@ No modules.
 
 ## Outputs
 
-| Name                                                  | Description                      |
-|-------------------------------------------------------|----------------------------------|
-| <a name="output_id"></a> [id](#output\_id)            | Private DNS Zone Id              |
-| <a name="output_name"></a> [id](#output\_name)        | Private DNS Zone Name            |
-| <a name="output_link_id"></a> [id](#output\_link\_id) | List of Virtual Network Link Ids |
+| Name                                                        | Description                      |
+|-------------------------------------------------------------|----------------------------------|
+| <a name="output_id"></a> [id](#output\_id)                  | Private DNS Zone Id              |
+| <a name="output_name"></a> [name](#output\_name)            | Private DNS Zone Name            |
+| <a name="output_link_id"></a> [link\_id](#output\_link\_id) | List of Virtual Network Link Ids |
 
 <!-- END_TF_DOCS -->
 
