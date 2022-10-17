@@ -1,4 +1,4 @@
-# Azure <> Terraform module
+# Azure Private DNS Terraform module
 Terraform module for creation Azure <>
 
 ## Usage
