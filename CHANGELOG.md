@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/data-platform-hq/terraform-azurerm-private-dns/compare/v1.1.0...v1.2.0) (2023-01-30)
+
+
+### Bug Fixes
+
+* dns_name dependancy ([8576148](https://github.com/data-platform-hq/terraform-azurerm-private-dns/commit/85761486754f84b11c3c32d64fdbf9e90922036e))
+* Merge branch 'dns-zone-dependance-on-name' of https://github.com/data-platform-hq/terraform-azurerm-private-dns into dns-zone-dependance-on-name ([de492af](https://github.com/data-platform-hq/terraform-azurerm-private-dns/commit/de492af89408aeaba15673a3d9d0112a397e1e79))
+* tags are default ([4a35ef8](https://github.com/data-platform-hq/terraform-azurerm-private-dns/commit/4a35ef8df61e033e0c47647d804e9cb8279a0e45))
+
+
+### Features
+
+* added precondition to link creation ([af511c7](https://github.com/data-platform-hq/terraform-azurerm-private-dns/commit/af511c7f250e8f384dcbfab59dfa2d6bdd87ad39))
+
 # [1.1.0](https://github.com/data-platform-hq/terraform-azurerm-private-dns/compare/v1.0.0...v1.1.0) (2022-10-20)
 
 
