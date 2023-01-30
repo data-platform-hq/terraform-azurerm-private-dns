@@ -6,6 +6,7 @@ variable "resource_group" {
 variable "tags" {
   type        = map(string)
   description = "Resource tags"
+  default     = {}
 }
 
 variable "dns_zone_name" {
