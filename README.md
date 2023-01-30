@@ -2,6 +2,41 @@
 Terraform module for creation Azure Private DNS
 
 ## Usage
+This module provides an ability to provision Private DNS Zone and create link between Private DNS Zone and Virtual Network. 
+
+Example on creation of Private DNS Zone within module and linking Virtual Network to it: 
+```hcl
+data "azurerm_virtual_network" "example" {
+  name                = "example_vnet"
+  resource_group_name = "example_rg"
+}
+
+module "dns" {
+  resource_group = "example_rg"
+  dns_zone_name  = "privatelink.dfs.core.windows.net"
+  vnet_map       = tomap({ 
+    (data.azurerm_virtual_network.example.name) = data.azurerm_virtual_network.example.id
+  })
+  tags = { environment = "dev" }
+}
+```
+
+Furthermore, it is possible to create link between already existing Private DNS Zone and Virtual Network, thus creating of new Private DNS Zone is actually optional.
+```hcl
+data "azurerm_virtual_network" "example" {
+  name                = "example_vnet"
+  resource_group_name = "example_rg"
+}
+
+module "dns" {
+  resource_group          = "example_rg"
+  external_dns_zone_name  = "privatelink.azuredatabricks.net"
+  vnet_map                = tomap({
+    (data.azurerm_virtual_network.example.name) = data.azurerm_virtual_network.example.id
+  })
+  tags = { environment = "dev" }
+}
+```
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
