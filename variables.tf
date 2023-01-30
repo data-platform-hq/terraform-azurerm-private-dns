@@ -1,8 +1,3 @@
-variable "create_private_zone" {
-  type        = bool
-  description = "Condition for Private DNS Zone creation"
-}
-
 variable "resource_group" {
   type        = string
   description = "Azure location"
@@ -11,12 +6,13 @@ variable "resource_group" {
 variable "tags" {
   type        = map(string)
   description = "Resource tags"
+  default     = {}
 }
 
 variable "dns_zone_name" {
   type        = string
   description = "Name of Private DNS Zone"
-  default     = "privatelink.azuredatabricks.net"
+  default     = ""
 }
 
 variable "vnet_map" {
