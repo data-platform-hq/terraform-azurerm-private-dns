@@ -14,4 +14,11 @@ resource "azurerm_private_dns_zone_virtual_network_link" "this" {
   resource_group_name   = var.resource_group
   virtual_network_id    = each.value
   tags                  = var.tags
+
+  lifecycle {
+    precondition {
+      condition     = length(var.dns_zone_name) == 0 && length(var.external_dns_zone_name) == 0 ? false : true
+      error_message = "Provide either 'dns_zone_name' value to create new Private DNS Zone or 'external_dns_zone_name' value to create link with already existing Private DNS Zone"
+    }
+  }
 }
