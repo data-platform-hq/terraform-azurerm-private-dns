@@ -9,6 +9,12 @@ variable "tags" {
   default     = {}
 }
 
+variable "prefix" {
+  type        = string
+  description = "Custom prefix to add to resource name"
+  default     = ""
+}
+
 variable "dns_zone_name" {
   type        = string
   description = "Name of Private DNS Zone"
