@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/data-platform-hq/terraform-azurerm-private-dns/compare/v1.2.0...v1.2.1) (2023-02-08)
+
+
+### Bug Fixes
+
+* added prefix variable ([e484b0e](https://github.com/data-platform-hq/terraform-azurerm-private-dns/commit/e484b0e616ace4e184621f0be4a75188b8b6ca5e))
+
 # [1.2.0](https://github.com/data-platform-hq/terraform-azurerm-private-dns/compare/v1.1.0...v1.2.0) (2023-01-30)
 
 
