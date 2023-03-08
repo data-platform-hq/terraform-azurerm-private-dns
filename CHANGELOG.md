@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/data-platform-hq/terraform-azurerm-private-dns/compare/v1.2.1...v1.3.0) (2023-03-08)
+
+
+### Bug Fixes
+
+* fixed dns vnet link naming ([87223eb](https://github.com/data-platform-hq/terraform-azurerm-private-dns/commit/87223ebece40cd48dfc22e3f96bc7aff3455c905))
+
+
+### Features
+
+* added custom names for resources ([d171349](https://github.com/data-platform-hq/terraform-azurerm-private-dns/commit/d17134954c3e0d9eb12e8be1485049a0bfedca8f))
+
 ## [1.2.1](https://github.com/data-platform-hq/terraform-azurerm-private-dns/compare/v1.2.0...v1.2.1) (2023-02-08)
 
 
