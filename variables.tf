@@ -3,6 +3,12 @@ variable "resource_group" {
   description = "Azure location"
 }
 
+variable "custom_dns_zone_vnet_link_name" {
+  type        = string
+  description = "The name of the Private DNS Zone Virtual Network Link"
+  default     = null
+}
+
 variable "tags" {
   type        = map(string)
   description = "Resource tags"

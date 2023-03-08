@@ -1,5 +1,6 @@
 locals {
-  prefix = length(var.prefix) == 0 ? "" : "${var.prefix}-"
+  prefix                     = length(var.prefix) == 0 ? "" : "${var.prefix}-"
+  private_dns_zone_vnet_link = var.custom_dns_zone_vnet_link_name == null ? "link-${local.prefix}${each.key}" : "${local.prefix}${var.custom_dns_zone_vnet_link_name}"
 }
 
 resource "azurerm_private_dns_zone" "this" {
@@ -13,7 +14,7 @@ resource "azurerm_private_dns_zone" "this" {
 resource "azurerm_private_dns_zone_virtual_network_link" "this" {
   for_each = var.vnet_map
 
-  name                  = "link-${local.prefix}${each.key}"
+  name                  = local.private_dns_zone_vnet_link
   private_dns_zone_name = length(var.dns_zone_name) == 0 ? var.external_dns_zone_name : azurerm_private_dns_zone.this[0].name
   resource_group_name   = var.resource_group
   virtual_network_id    = each.value
