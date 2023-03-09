@@ -65,14 +65,15 @@ No modules.
 
 ## Inputs
 
-| Name                                                                                                       | Description                                                                                           | Type          | Default | Required |
-| ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------- | ------- | :------: |
-| <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group)                             | The Azure Region in which all resources in this example should be created.                            | `string`      | n/a     |   yes    |
-| <a name="input_tags"></a> [tags](#input\_tags)                                                             | list of tags                                                                                          | `map(string)` | `{}`    |    no    |
-| <a name="input_prefix"></a> [prefix](#input\_prefix)                                                       | Custom prefix to add to resource name                                                                 | `string`      | `""`    |    no    |
-| <a name="input_dns_zone_name"></a> [dns\_zone\_name](#input\_dns\_zone\_name)                              | Name of Private DNS Zone                                                                              | `string`      | `""`    |    no    |
-| <a name="input_vnet_map"></a> [vnet_map](#input\_vnet\_map)                                                | Map of Virtual Network Name to Id, used to create VNet Link to Private DNS                            | `map(string)` | `{}`    |    no    |
-| <a name="input_external_dns_zone_name"></a> [external\_dns\_zone\_name](#input\_external\_dns\_zone\_name) | Name of Imported Private DNS Zone. Provide value in case creation of new Private DNS Zone is disabled | `string`      | `""`    |    no    |
+| Name                                                                                                                                   | Description                                                                                           | Type          | Default | Required |
+| -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------- | ------- | :------: |
+| <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group)                                                         | The Azure Region in which all resources in this example should be created.                            | `string`      | n/a     |   yes    |
+| <a name="input_custom_dns_zone_vnet_link_name"></a> [custom\_dns\_zone\_vnet\_link\_name](#input\_custom\_dns\_zone\_vnet\_link\_name) | The name of the Private DNS Zone Virtual Network Link                                                 | `string`      | `null`  |    no    |
+| <a name="input_tags"></a> [tags](#input\_tags)                                                                                         | list of tags                                                                                          | `map(string)` | `{}`    |    no    |
+| <a name="input_prefix"></a> [prefix](#input\_prefix)                                                                                   | Custom prefix to add to resource name                                                                 | `string`      | `""`    |    no    |
+| <a name="input_dns_zone_name"></a> [dns\_zone\_name](#input\_dns\_zone\_name)                                                          | Name of Private DNS Zone                                                                              | `string`      | `""`    |    no    |
+| <a name="input_vnet_map"></a> [vnet_map](#input\_vnet\_map)                                                                            | Map of Virtual Network Name to Id, used to create VNet Link to Private DNS                            | `map(string)` | `{}`    |    no    |
+| <a name="input_external_dns_zone_name"></a> [external\_dns\_zone\_name](#input\_external\_dns\_zone\_name)                             | Name of Imported Private DNS Zone. Provide value in case creation of new Private DNS Zone is disabled | `string`      | `""`    |    no    |
 
 ## Outputs
 
