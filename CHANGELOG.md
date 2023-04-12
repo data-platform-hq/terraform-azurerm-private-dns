@@ -1,3 +1,12 @@
+## [1.3.1](https://github.com/data-platform-hq/terraform-azurerm-private-dns/compare/v1.3.0...v1.3.1) (2023-04-12)
+
+
+### Bug Fixes
+
+* chenged lifecycle condition ([b73b443](https://github.com/data-platform-hq/terraform-azurerm-private-dns/commit/b73b443a55fa1753aaa926cdfe27fe30940ba915))
+* fix vitual link name ([e7402be](https://github.com/data-platform-hq/terraform-azurerm-private-dns/commit/e7402beb4f30b36859f690f05f74e9fed2ee8e94))
+* terraform fmt ([e122981](https://github.com/data-platform-hq/terraform-azurerm-private-dns/commit/e122981103ade2b288ba2027a029f2b03f78c5d0))
+
 # [1.3.0](https://github.com/data-platform-hq/terraform-azurerm-private-dns/compare/v1.2.1...v1.3.0) (2023-03-08)
 
 
