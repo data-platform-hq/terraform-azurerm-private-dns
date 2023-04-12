@@ -1,5 +1,5 @@
 locals {
-  prefix                     = length(var.prefix) == 0 ? "" : "${var.prefix}"
+  prefix                     = length(var.prefix) == 0 ? "" : var.prefix
   private_dns_zone_vnet_link = var.custom_dns_zone_vnet_link_name == null ? "link-${local.prefix}" : "${local.prefix}-${var.custom_dns_zone_vnet_link_name}"
 }
 
