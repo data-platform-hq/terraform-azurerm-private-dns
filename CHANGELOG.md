@@ -1,3 +1,16 @@
+# [1.4.0](https://github.com/data-platform-hq/terraform-azurerm-private-dns/compare/v1.3.1...v1.4.0) (2024-05-20)
+
+
+### Bug Fixes
+
+* added security KICS scan action ([e11c10b](https://github.com/data-platform-hq/terraform-azurerm-private-dns/commit/e11c10bea815b9b914b3c0620645679adec01c4a))
+* replaced pre-commit repo docs creation/update by GH Actions ([54902e1](https://github.com/data-platform-hq/terraform-azurerm-private-dns/commit/54902e1071d79cf5aa20e74b8ecf2a70881ff100))
+
+
+### Features
+
+* refactor conditions; support a records ([b0bda97](https://github.com/data-platform-hq/terraform-azurerm-private-dns/commit/b0bda971b2c803bc6e39518d7b861fb04112d84b))
+
 ## [1.3.1](https://github.com/data-platform-hq/terraform-azurerm-private-dns/compare/v1.3.0...v1.3.1) (2023-04-12)
 
 
