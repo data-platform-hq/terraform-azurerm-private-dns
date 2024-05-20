@@ -1,12 +1,27 @@
-variable "resource_group" {
+variable "dns_zone_name" {
   type        = string
-  description = "Azure location"
+  description = "The name of the Private DNS Zone that needs to be created or linked to the virtual network"
 }
 
-variable "custom_dns_zone_vnet_link_name" {
+variable "resource_group" {
   type        = string
-  description = "The name of the Private DNS Zone Virtual Network Link"
-  default     = null
+  description = "Resource group where Private DNS zone would be created or it is already exists"
+}
+
+variable "create_private_dns_zone" {
+  type        = bool
+  description = "Boolean flag that determines whether Private DNS Zones is created by this module"
+  default     = true
+}
+
+variable "private_dns_a_records" {
+  type = list(object({
+    name    = string
+    ttl     = optional(number, 300)
+    records = list(string)
+  }))
+  description = "List of objects with parameters to create A Record in Private DNS Zone"
+  default     = []
 }
 
 variable "tags" {
@@ -15,26 +30,8 @@ variable "tags" {
   default     = {}
 }
 
-variable "prefix" {
-  type        = string
-  description = "Custom prefix to add to resource name"
-  default     = ""
-}
-
-variable "dns_zone_name" {
-  type        = string
-  description = "Name of Private DNS Zone"
-  default     = ""
-}
-
 variable "vnet_map" {
   type        = map(string)
   description = "Map of Virtual Network Name to Id, used to create VNet Link to Private DNS"
   default     = {}
-}
-
-variable "external_dns_zone_name" {
-  type        = string
-  description = "Name of Imported Private DNS Zone. Provide value in case creation of new Private DNS Zone is disabled"
-  default     = ""
 }
