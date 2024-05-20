@@ -60,6 +60,7 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [azurerm_private_dns_a_record.example](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_dns_a_record) | resource |
 | [azurerm_private_dns_zone.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_dns_zone) | resource |
 | [azurerm_private_dns_zone_virtual_network_link.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_dns_zone_virtual_network_link) | resource |
 
@@ -67,11 +68,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_custom_dns_zone_vnet_link_name"></a> [custom\_dns\_zone\_vnet\_link\_name](#input\_custom\_dns\_zone\_vnet\_link\_name) | The name of the Private DNS Zone Virtual Network Link | `string` | `null` | no |
-| <a name="input_dns_zone_name"></a> [dns\_zone\_name](#input\_dns\_zone\_name) | Name of Private DNS Zone | `string` | `""` | no |
-| <a name="input_external_dns_zone_name"></a> [external\_dns\_zone\_name](#input\_external\_dns\_zone\_name) | Name of Imported Private DNS Zone. Provide value in case creation of new Private DNS Zone is disabled | `string` | `""` | no |
-| <a name="input_prefix"></a> [prefix](#input\_prefix) | Custom prefix to add to resource name | `string` | `""` | no |
-| <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | Azure location | `string` | n/a | yes |
+| <a name="input_create_private_dns_zone"></a> [create\_private\_dns\_zone](#input\_create\_private\_dns\_zone) | Boolean flag that determines whether Private DNS Zones is created by this module | `bool` | `true` | no |
+| <a name="input_dns_zone_name"></a> [dns\_zone\_name](#input\_dns\_zone\_name) | The name of the Private DNS Zone that needs to be created or linked to the virtual network | `string` | n/a | yes |
+| <a name="input_private_dns_a_records"></a> [private\_dns\_a\_records](#input\_private\_dns\_a\_records) | List of objects with parameters to create A Record in Private DNS Zone | <pre>list(object({<br>    name    = string<br>    ttl     = optional(number, 300)<br>    records = list(string)<br>  }))</pre> | `[]` | no |
+| <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | Resource group where Private DNS zone would be created or it is already exists | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | Resource tags | `map(string)` | `{}` | no |
 | <a name="input_vnet_map"></a> [vnet\_map](#input\_vnet\_map) | Map of Virtual Network Name to Id, used to create VNet Link to Private DNS | `map(string)` | `{}` | no |
 
@@ -80,9 +80,9 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_id"></a> [id](#output\_id) | Private DNS Zone Id |
-| <a name="output_link_id"></a> [link\_id](#output\_link\_id) | List of Virtual Network Link Ids |
 | <a name="output_name"></a> [name](#output\_name) | Private DNS Zone Name |
 | <a name="output_resource_group"></a> [resource\_group](#output\_resource\_group) | Private DNS Zone Resource Group |
+| <a name="output_vnet_link_name_to_id_map"></a> [vnet\_link\_name\_to\_id\_map](#output\_vnet\_link\_name\_to\_id\_map) | Map of Virtual Network Link names to it's ids |
 <!-- END_TF_DOCS -->
 
 ## License
