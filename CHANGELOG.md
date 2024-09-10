@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/data-platform-hq/terraform-azurerm-private-dns/compare/v1.4.0...v1.5.0) (2024-09-10)
+
+
+### Features
+
+* upgrade to AzureRM v4 ([11bddd1](https://github.com/data-platform-hq/terraform-azurerm-private-dns/commit/11bddd128efc4128a17a21be6e6b924517e39b2c))
+
 # [1.4.0](https://github.com/data-platform-hq/terraform-azurerm-private-dns/compare/v1.3.1...v1.4.0) (2024-05-20)
 
 
